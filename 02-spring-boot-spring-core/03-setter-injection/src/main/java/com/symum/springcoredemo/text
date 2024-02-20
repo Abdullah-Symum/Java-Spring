@@ -1,0 +1,39 @@
+Inversion of Control (IOC):
+  --> The approach of outsourcing the construction and managements of objets. That means another entity
+      will be in control of managing the construction and managements of the objects.
+  --> Spring container will work as object factory and mange the objects.
+      * Create and manage objects (IOC).
+      * Injects object dependencies (Dependency injection).
+  --> Configuring spring container:
+      1. XML Configuration file (Legacy).
+      2. Java annotation.
+      3. Java Source Code.
+  --> Dependency Injection:
+      The dependency inversion principle- The client delegates to annother object the responsibility
+      of providing its dependencies. (Helper Objects)
+  --> Development process for Construction Injection:
+      1. Define the dependency interface and class.
+      2. Create Demo REST Controller.
+      3. Create a constructor in your class for injections.
+      4. Add @Getmapping for /dailyworkout.
+  --> @Component annotation:
+      * @Component marks the class as a Spring Bean.
+        A Spring Bean is a regular Java class that is managed by SPRING.
+      * It also makes the bean available for the dependencies injection.
+      ## @Autowired annotation tells Spring to inject a dependency.
+  --> Setter Method:
+      Injects dependencies by calling setter method(s) in the class.
+  --> Development Process:
+      1. Create setter methods in your class for injections.
+      2. Configure the dependency injection with @Autowired annotation.
+  --> Injection Type:
+      * Constructor Injection(recommended by spring.io)
+       -> Use this when we required dependencies.
+       -> Generally recommended by the spring.io development team as first choice.
+      * Setter Injection (recommended by spring.io)
+       -> Use this when we need optional dependencies.
+       -> If dependency is not provided, your app can provide reasonable default logic.
+      * Field Injection ( not recommended by spring.io)
+       -> Inject dependencies by setting field values directly in the class. (Even in the private fields)
+       -> It makes the code harder to unit test.
+

@@ -1,0 +1,13 @@
+  --> @Qualifier
+       -> When there is more bean then one the spring will not initialize as bean does not know which one
+          to call, so by @Qualifier annotation we can determine the individual bean to start.
+       -> It can be called by (@Qualifier("cricketCoach")), here the name should be the exact class name.
+  --> @Primary
+       -> If we uses @Primary annotation we do not have to use @Qualifier annotation any more.
+       -> When using @Primary, can have only one for multiple implementations.
+       -> If you mark multiple classes with @Primary we will see "Unsatisfied
+          dependency expressed through constructor".
+       -> Among @Primary and @Qualifier, @Qualifier has the higher priority.
+       -> @Primary leaves it up to the implementation classes and leads to an error for using multiple,
+          whereas @Qualifier allows to be very specific on which bean you will implement.
+

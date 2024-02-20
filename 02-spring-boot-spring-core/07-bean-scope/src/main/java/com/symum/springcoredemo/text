@@ -1,0 +1,23 @@
+  --> Bean Scopes
+       -> Scope refers to the lifecycle of a bean.
+       -> Default scope in spring is singleton.
+           * Spring Container creates only one instance of the bean, by default.
+           * It is cached in memory.
+           * All dependency injections for the bean - reference the same bean.
+           
+  --> Additional Spring Bean Scopes
+       -> [Singleton] Create a single shared instance of the bean. Default scope.
+       -> [Prototype] Creates a new bean instance for each container request.
+       -> [Request] scoped to an HTTP web request. Only used for web apps.
+       -> [Session] scoped to an HTTP web session. Only used for web apps.
+       -> [Global-Session] scoped to a global HTTP web session. Only used for web apps.
+
+  --> Bean LifeCycle Method
+       -> Container Started -> Bean Instantiated -> Dependencies Injected -> Internal Spring
+          Processing -> Custom init Method -> Bean is ready for use.
+       -> Container Shutdown -> custom destroy method -> STOP.
+       -> @PostConstruct annotation helps to build custom logic during initiation of a bean.
+       -> @PreDestroy annotation helps to build custom logic during destroy the bean like cleanup.
+  --> Development Process:
+       1. Define your methods init.
+       2. Add annotations: @PostConstruct @PreDestroy.

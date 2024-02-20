@@ -1,0 +1,21 @@
+  --> Lazy Initialization (@Lazy)
+       -> Instead of creating all beans up front, we can specify lazy initialization.
+       -> A bean will only be initialized in the following cases; either it is needed for dependency
+          injection or it is explicitly requested.
+       -> For lazy initialization we have to use @Lazy annotation to the class.
+       -> It may help with faster startup time if we have large number of components.
+       -> But for GLOBAL CONFIGURATION we can run the following code
+          [spring.main.lazy-initialization=true] in the application.properties and it will initialize
+          the bean only when the bean is needed.
+  (**) -> The disadvantage of lazy initialization is if you have web related components like @RestController,
+          not created until requested.
+  --> getClass():
+       -> In Java, the getClass() method is a method available to all objects, and it is part of the
+          java.lang.Object class, which is the root class for all Java classes. The primary purpose of
+          the getClass() method is to retrieve the runtime class information of an object. It returns an
+          instance of the java.lang.Class class, which provides various methods and information about the
+          class to which the object belongs.
+  --> getSimpleName():
+       -> In Java, the getSimpleName() method is a method of the Class class, and it is used to retrieve
+          the simple (unqualified) name of a class. This method returns a String that represents the name
+          of the class without the package information.

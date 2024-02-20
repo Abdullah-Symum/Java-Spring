@@ -1,0 +1,12 @@
+  --> Java Config Bean
+       -> Make an existing third-party class available to spring framework.
+       -> Create a Java class and annotate as a @Configuration. This is basically a
+          configuration class for configuring spring using custom approach.
+       -> Define @Bean method to configure the bean.(the bean id defaults to the method name.)
+       -> Inject the bean to our controller.
+
+  --> Hibernate JPA Overview.
+       -> Hibernate handles all the low level SQL.
+       -> Minimize the amount of JDBC code you have to develop.
+       -> Hibernate provides the object to relational Mapping(ORM).
+       -> entityManager.persist(*Object*) it is a special JPA helper object.
