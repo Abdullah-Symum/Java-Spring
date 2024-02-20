@@ -1,0 +1,29 @@
+ --> JAVA JSON Data Binding
+    -> Data binding is actually converting JSON data to a java pojo.
+    -> Spring uses the jackson project behind the scene for handling the data between
+       JSON and java pojo.
+    -> By default jackson will call the appropriate getter or setter method.
+
+ --> @PostConstruct
+    -> The @PostConstruct annotation is used in Java EE (Enterprise Edition) and Spring Framework to
+       specify a method that should be executed immediately after a bean has been instantiated, and
+       before any other methods are called or any dependencies are injected. It is typically used for
+       initialization tasks that need to be performed after the bean is created.
+ --> @PathVariable
+    -> The @PathVariable annotation is used in Spring Framework (particularly in Spring MVC) to extract
+       values from the URI (Uniform Resource Identifier) template and bind them to method parameters in
+       a Spring MVC controller. This annotation is often used when building RESTful web services or
+       handling URL patterns with dynamic segments.
+
+       @Controller
+       @RequestMapping("/example")
+       public class MyController {
+
+           @GetMapping("/user/{id}")
+           @ResponseBody
+           public String getUserById(@PathVariable Long id) {
+               // The {id} segment from the URL will be bound to the 'id' parameter.
+               return "User ID: " + id;
+           }
+       }
+       ** Here the variable and method param should match.
