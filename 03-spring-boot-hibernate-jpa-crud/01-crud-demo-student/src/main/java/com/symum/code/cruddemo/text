@@ -1,0 +1,26 @@
+ --> CommandLineRunner
+      -> CommandLineRunner is an interface in the Spring Framework for building command-line
+         applications. It's part of the Spring Boot project and provides a way to execute code
+         when a Spring Boot application starts up. Specifically, it allows you to run custom
+         code after the Spring application context has been initialized.
+
+ --> JPA Query Language (JPQL)
+      -> Query language for retrieving objects
+      -> Similar to SQL
+      -> However, JPQL is based on entity name and entity fields.
+
+ --> Configuration application.properties
+      -> spring.jpa.hibernate.ddl-auto=create
+          --> none        > No action will be performed.
+          --> create-only > Database table will be only created.
+          --> drop        > Database table will be dropped.
+          --> create      > Database tables will be created followed by database table creation.
+          --> create-drop > Database tables will be created followed by database table creation. On application
+                            shutdown, drop the database table.
+          --> validate    > Validate the database tables schema.
+          --> update      > update the database tables schema.
+
+ --> JSON
+      -> JavaScript object Notation - which is a lightweight data format for storing and exchanging data... plain text
+      -> Language independent.
+      -> Curly braces define objects in JSON.
